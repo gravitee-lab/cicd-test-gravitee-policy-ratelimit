@@ -95,6 +95,8 @@
               <exclude>pom.xml.versionsBackup</exclude>
               <exclude>ratelimit.svg</exclude>
               <exclude>**/*.properties</exclude>
+              <exclude>**/*.logback.xml</exclude>
+              <exclude>**/*.ehcache.xml</exclude>
               <exclude>*.logs</exclude>
               <exclude>**/*.scss</exclude>
               <exclude>**/*.svg</exclude>
