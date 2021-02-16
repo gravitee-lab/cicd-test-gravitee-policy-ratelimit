@@ -94,6 +94,7 @@
               <exclude>LICENSE.txt</exclude>
               <exclude>pom.xml.versionsBackup</exclude>
               <exclude>ratelimit.svg</exclude>
+              <exclude>**/*.properties</exclude>
               <exclude>*.logs</exclude>
               <exclude>**/*.scss</exclude>
               <exclude>**/*.svg</exclude>
