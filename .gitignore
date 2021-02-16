@@ -20,3 +20,5 @@ hs_err_pid*
 .project
 # ingore the [settings.xml] which contains secrets (password to artifactory)
 settings.xml
+# ingore the [settings.xml] which contains secrets (password to artifactory)
+settings.xml
