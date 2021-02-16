@@ -18,3 +18,5 @@ hs_err_pid*
 .settings/
 .classpath
 .project
+# ingore the [settings.xml] which contains secrets (password to artifactory)
+settings.xml
