@@ -158,6 +158,43 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+              <groupId>com.mycila</groupId>
+              <artifactId>license-maven-plugin</artifactId>
+              <configuration>
+                <mapping>
+                  <ts>SLASHSTAR_STYLE</ts>
+                </mapping>
+                <excludes>
+                  <exclude>LICENSE.txt</exclude>
+                  <exclude>pom.xml.versionsBackup</exclude>
+                  <exclude>ratelimit.svg</exclude>
+                  <exclude>**/*.properties</exclude>
+                  <exclude>**/logback.xml</exclude>
+                  <exclude>**/ehcache.xml</exclude>
+                  <exclude>*.logs</exclude>
+                  <exclude>**/*.scss</exclude>
+                  <exclude>**/*.svg</exclude>
+                  <exclude>Jenkinsfile</exclude>
+                  <exclude>**/.*</exclude>
+                  <exclude>**/*.adoc</exclude>
+                  <exclude>**/*.woff</exclude>
+                  <exclude>**/*.ttf</exclude>
+                  <exclude>**/*.woff2</exclude>
+                  <exclude>**/*.eot</exclude>
+                  <exclude>.*</exclude>
+                  <exclude>.*/**</exclude>
+                  <exclude>package-json.lock</exclude>
+                  <exclude>.tmp/**</exclude>
+                  <exclude>.vscode/**</exclude>
+                  <exclude>dist/**</exclude>
+                  <exclude>.*</exclude>
+                  <exclude>.*/**</exclude>
+                  <exclude>**/*.adoc</exclude>
+                  <exclude>node_modules/**</exclude>
+                </excludes>
+              </configuration>
+            </plugin>
         </plugins>
     </build>
 
