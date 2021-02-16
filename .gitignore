@@ -24,3 +24,5 @@ settings.xml
 settings.xml
 # ingore the [settings.xml] which contains secrets (password to artifactory)
 settings.xml
+# ingore the [settings.xml] which contains secrets (password to artifactory)
+settings.xml
