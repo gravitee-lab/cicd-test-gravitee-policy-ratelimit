@@ -68,33 +68,18 @@ workflows:
           maven_profile_id: << pipeline.parameters.maven_profile_id >>
           s3_bucket_name: << pipeline.parameters.s3_bucket_name >>
 
-  nexus_staging_dry_run:
-    # see https://circleci.com/docs/2.0/configuration-reference/#logic-statement-examples
-    when:
-      and:
-        - equal: [ nexus_staging, << pipeline.parameters.gio_action >> ]
-        - << pipeline.parameters.dry_run >>
-    jobs:
-      # return to simple definition :
-      - gravitee/nexus_staging:
-          context: cicd-orchestrator
-          dry_run: << pipeline.parameters.dry_run >>
-          secrethub_org: << pipeline.parameters.secrethub_org >>
-          secrethub_repo: << pipeline.parameters.secrethub_repo >>
-          maven_profile_id: << pipeline.parameters.maven_profile_id >>
-          s3_bucket_name: << pipeline.parameters.s3_bucket_name >>
-
   nexus_staging:
     # see https://circleci.com/docs/2.0/configuration-reference/#logic-statement-examples
+    # when:
+      # and:
+        # - equal: [ nexus_staging, << pipeline.parameters.gio_action >> ]
+        # - not: << pipeline.parameters.dry_run >>
     when:
-      and:
-        - equal: [ nexus_staging, << pipeline.parameters.gio_action >> ]
-        - not: << pipeline.parameters.dry_run >>
+      equal: [ nexus_staging, << pipeline.parameters.gio_action >> ]
     jobs:
       # return to simple definition :
       - gravitee/nexus_staging:
           context: cicd-orchestrator
-          dry_run: << pipeline.parameters.dry_run >>
           secrethub_org: << pipeline.parameters.secrethub_org >>
           secrethub_repo: << pipeline.parameters.secrethub_repo >>
           maven_profile_id: << pipeline.parameters.maven_profile_id >>
